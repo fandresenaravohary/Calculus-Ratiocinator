@@ -22,6 +22,8 @@ public class Et extends Affirmation {
 
         if(premiere_affirmation.equals("vrai") && deuxieme_affirmation.equals("vrai")){
             return "vrai";
+        }else if(premiere_affirmation.equals("vrai") && deuxieme_affirmation.equals("je ne sais pas")){
+            return "affirmation";
         }else {
             return "faux";
         }

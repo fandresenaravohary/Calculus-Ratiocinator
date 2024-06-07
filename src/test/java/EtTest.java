@@ -1,3 +1,4 @@
+import com.CALCULUS.affirmation.Inconnu;
 import com.CALCULUS.affirmation.Mensonge;
 import com.CALCULUS.affirmation.Verite;
 import com.CALCULUS.conjonction.Et;
@@ -23,6 +24,16 @@ public class EtTest {
 
         Et et = new Et(verite1, mensonge1);
 
-        assertEquals("faux", et.evaluer(), "Lun est vrai, l'autre est faux don le resultat devrait etre je ne sais pas");
+        assertEquals("faux", et.evaluer(), "L'un est vrai, l'autre est faux don le resultat devrait etre je ne sais pas");
+    }
+
+    @Test
+    public void testEt_UnVerite_et_UnInconnu(){
+        Inconnu inconnu1 = new Inconnu("Lou est genereux", "Lou est genereux");
+        Verite verite1 = new Verite("Lou est beau", "Lou est beau");
+
+        Et et = new Et(verite1, inconnu1);
+
+        assertEquals("affirmation", et.evaluer(), "L'un est un verite et l'autre un inconnu donc le resultat devrait etre affirmation");
     }
 }
