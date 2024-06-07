@@ -9,8 +9,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class EtTest {
     @Test
     public void testEt_DeuxVerites() {
-        Verite verite1 = new Verite("Lou est beau", "Lou est beau");
-        Verite verite2 = new Verite("Lou est généreux", "Lou est généreux");
+        Verite verite1 = new Verite("Lou est beau", "Lou est gentil");
+        Verite verite2 = new Verite("Lou est généreux", "Lou partage son gouter");
 
         Et et = new Et(verite1, verite2);
 
@@ -19,7 +19,7 @@ public class EtTest {
 
     @Test
     public void testEt_UnVerites_et_Un_mensonge(){
-        Verite verite1 = new Verite("Lou est beau", "Lou est beau");
+        Verite verite1 = new Verite("Lou est beau", "Lou est gentil");
         Mensonge mensonge1 = new Mensonge("Lou est pauvre", "Lou est pauvre");
 
         Et et = new Et(verite1, mensonge1);
@@ -29,8 +29,8 @@ public class EtTest {
 
     @Test
     public void testEt_UnVerite_et_UnInconnu(){
-        Inconnu inconnu1 = new Inconnu("Lou est genereux", "Lou est genereux");
-        Verite verite1 = new Verite("Lou est beau", "Lou est beau");
+        Inconnu inconnu1 = new Inconnu("Lou est genereux", "Lou cache son visage");
+        Verite verite1 = new Verite("Lou est beau", "Lou est gentil");
 
         Et et = new Et(verite1, inconnu1);
 

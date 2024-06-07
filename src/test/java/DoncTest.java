@@ -10,7 +10,7 @@ public class DoncTest {
     @Test
     public void PremiereVerite_et_DeuxiemeMensonge(){
         Verite verite1 = new Verite("Lou est beau", "Lou est beau");
-        Mensonge mensonge1 = new Mensonge("Lou est un menteur", "Lou est un menteur");
+        Mensonge mensonge1 = new Mensonge("Lou est un menteur", "Lou est un voleur");
 
         Donc donc = new Donc(verite1, mensonge1);
 
@@ -19,8 +19,8 @@ public class DoncTest {
 
     @Test
     public void PremiereMensonge_et_DeuxiemeVerite(){
-        Verite verite1 = new Verite("Lou est beau", "Lou est beau");
-        Mensonge mensonge1 = new Mensonge("Lou est un menteur", "Lou est un menteur");
+        Verite verite1 = new Verite("Lou est beau", "Lou est gentil");
+        Mensonge mensonge1 = new Mensonge("Lou est un menteur", "Lou est un voleur");
 
         Donc donc = new Donc(mensonge1, verite1);
 
