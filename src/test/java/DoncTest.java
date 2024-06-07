@@ -1,7 +1,6 @@
 import com.CALCULUS.affirmation.Mensonge;
 import com.CALCULUS.affirmation.Verite;
 import com.CALCULUS.conjonction.Donc;
-import com.CALCULUS.conjonction.Et;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
